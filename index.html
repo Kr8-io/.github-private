@@ -65,6 +65,14 @@
         background: var(--accent);
         color: #fff;
         font-size: 1rem;
+        cursor: pointer;
+      }
+      .action:hover {
+        filter: brightness(1.06);
+      }
+      .action:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--accent), white 35%);
+        outline-offset: 2px;
       }
       @media (min-width: 768px) {
         .layout {
