@@ -12,6 +12,7 @@
         --text: #1b1f2a;
         --muted: #5b6476;
         --accent: #4f46e5;
+        --focus-outline: #ffffff;
       }
       @media (prefers-color-scheme: dark) {
         :root {
@@ -20,6 +21,7 @@
           --text: #f2f4ff;
           --muted: #b7bfd6;
           --accent: #8b82ff;
+          --focus-outline: #0f1220;
         }
       }
       * {
@@ -73,7 +75,7 @@
         transform: translateY(-1px);
       }
       .action:focus-visible {
-        outline: 2px solid #fff;
+        outline: 2px solid var(--focus-outline);
         outline-offset: 2px;
         box-shadow: 0 0 0 4px var(--accent);
       }
