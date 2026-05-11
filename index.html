@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General App UI</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f4f6fb;
+        --card: #ffffff;
+        --text: #1b1f2a;
+        --muted: #5b6476;
+        --accent: #4f46e5;
+        --focus-outline: #000000;
+        --focus-ring: rgba(0, 0, 0, 0.35);
+        --action-text: #ffffff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f1220;
+          --card: #171b2d;
+          --text: #f2f4ff;
+          --muted: #b7bfd6;
+          --accent: #8b82ff;
+          --focus-outline: #ffffff;
+          --focus-ring: rgba(255, 255, 255, 0.55);
+          --action-text: #111827;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      .layout {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 16px;
+        display: grid;
+        gap: 16px;
+      }
+      .card {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(1.4rem, 2vw, 2rem);
+      }
+      h2 {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .grid {
+        display: grid;
+        gap: 12px;
+      }
+      .action {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        padding: 12px;
+        background: var(--accent);
+        color: var(--action-text);
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        transition: transform 120ms ease, filter 120ms ease;
+      }
+      .action:hover {
+        filter: brightness(1.06);
+        transform: translateY(-1px);
+      }
+      .action:focus-visible {
+        outline: 2px solid var(--focus-outline);
+        outline-offset: 2px;
+        box-shadow: 0 0 0 4px var(--focus-ring);
+      }
+      @media (min-width: 768px) {
+        .layout {
+          grid-template-columns: 2fr 1fr;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="layout">
+      <section class="card grid">
+        <h1>General UI Template</h1>
+        <p>A responsive starter layout that adapts for mobile and web apps.</p>
+      </section>
+      <section class="card grid">
+        <h2>Reusable Actions</h2>
+        <a class="action" href="https://github.com/Kr8-io/.github-private">
+          View documentation
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
