@@ -12,6 +12,7 @@
         --text: #1b1f2a;
         --muted: #5b6476;
         --accent: #4f46e5;
+        --focus: #111827;
       }
       @media (prefers-color-scheme: dark) {
         :root {
@@ -20,6 +21,7 @@
           --text: #f2f4ff;
           --muted: #b7bfd6;
           --accent: #8b82ff;
+          --focus: #ffffff;
         }
       }
       * {
@@ -71,7 +73,7 @@
         filter: brightness(1.06);
       }
       .action:focus-visible {
-        outline: 3px solid color-mix(in srgb, var(--accent), white 35%);
+        outline: 3px solid var(--focus);
         outline-offset: 2px;
       }
       @media (min-width: 768px) {
