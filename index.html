@@ -13,6 +13,7 @@
         --muted: #5b6476;
         --accent: #4f46e5;
         --focus-outline: #000000;
+        --focus-ring: rgba(0, 0, 0, 0.35);
       }
       @media (prefers-color-scheme: dark) {
         :root {
@@ -22,6 +23,7 @@
           --muted: #b7bfd6;
           --accent: #8b82ff;
           --focus-outline: #ffffff;
+          --focus-ring: rgba(255, 255, 255, 0.55);
         }
       }
       * {
@@ -77,7 +79,7 @@
       .action:focus-visible {
         outline: 2px solid var(--focus-outline);
         outline-offset: 2px;
-        box-shadow: 0 0 0 4px var(--accent);
+        box-shadow: 0 0 0 4px var(--focus-ring);
       }
       @media (min-width: 768px) {
         .layout {
